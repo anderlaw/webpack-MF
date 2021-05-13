@@ -1,0 +1,13 @@
+{
+  "scripts":{
+  	"client":"npm run dev --prefix front-end-proj-dir",
+    "server":"node./index.js",
+    "start-before-survey":"concurrently \"npm run start --prefix before-survey\" \"npm run serve --prefix before-survey\"",
+    "start-third-libs":"concurrently \"npm run start --prefix third-libs\" \"npm run serve --prefix third-libs\"",
+    "all":"concurrently \"npm run start-before-survey\" \"npm run start-third-libs\""
+  },
+  "devDependencies": {
+    "concurrently": "^6.1.0",
+    "serve": "^11.3.2"
+  }
+}
